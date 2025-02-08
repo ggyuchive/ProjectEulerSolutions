@@ -1,8 +1,6 @@
-/*
-* Author: Byeonggyu Park
-* Created on 2025/02/07 23:45
-* Answer: 4613732
-*/
+// Author: Byeonggyu Park
+// Created on 2025/02/07 23:45
+// Answer: 4613732
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;

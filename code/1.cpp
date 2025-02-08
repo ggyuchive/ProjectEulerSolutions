@@ -1,8 +1,6 @@
-/*
-* Author: Byeonggyu Park
-* Created on 2025/02/07 23:43
-* Answer: 233168
-*/
+// Author: Byeonggyu Park
+// Created on 2025/02/07 23:43
+// Answer: 233168
 #include <bits/stdc++.h>
 using namespace std;
 

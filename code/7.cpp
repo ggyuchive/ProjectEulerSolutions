@@ -1,8 +1,6 @@
-/*
-* Author: Byeonggyu Park
-* Created on 2025/02/07 23:54
-* Answer: 104743
-*/
+// Author: Byeonggyu Park
+// Created on 2025/02/07 23:54
+// Answer: 104743
 #include <bits/stdc++.h>
 #include "../utils/NumberTheoryUtil.hpp"
 using namespace std;
