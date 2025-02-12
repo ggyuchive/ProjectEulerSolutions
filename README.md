@@ -1,3 +1,5 @@
-# Project Euler solution
+# Project Euler Solutions
+![Project Euler Profile](https://projecteuler.net/profile/zarami1214.png)
 
-- Write codes in cpp or python
+- Codes in cpp/python/rust
+- Various utils to solve in cpp
