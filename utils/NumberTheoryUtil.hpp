@@ -15,8 +15,7 @@ ll lcm(ll A, ll B) { return A * (B / gcd(A, B)); }
  */
 bool isPrimeNumber(ll N)
 {
-    for (ll i = 2; i*i <= N; i++)
-    {
+    for (ll i = 2; i*i <= N; i++) {
         if (N%i == 0)
             return false;
     }
@@ -31,16 +30,13 @@ vector<ll> getPrimeNumbers(ll N)
 {
     vector<ll> ret;
     vector<bool> prime(N+1, true);
-    for (ll i = 2; i*i <= N; i++)
-    {
-        if (prime[i])
-        {
+    for (ll i = 2; i*i <= N; i++) {
+        if (prime[i]) {
             for (ll j = i*i; j <= N; j+=i)
                 prime[j]=false;
         }
     }
-    for (ll i = 2; i <= N; i++)
-    {
+    for (ll i = 2; i <= N; i++) {
         if (prime[i])
             ret.push_back(i);
     }
@@ -51,7 +47,7 @@ vector<ll> getPrimeNumbers(ll N)
  * return prime factors of N
  * Time Complexity: O(sqrt(N))
  */
-vector<ll> getprimeFactor(ll N)
+vector<ll> getPrimeFactors(ll N)
 {
     vector<ll> ret;
     for (ll i = 2; i*i <= N; i++) {
@@ -65,9 +61,22 @@ vector<ll> getprimeFactor(ll N)
     return ret;
 }
 
+vector<ll> getDivisors(ll N)
+{
+    vector<ll> ret;
+    for (ll i = 1; i*i <= N; i++) {
+        if (N%i == 0) {
+            if (i*i == N) ret.push_back(i);
+            else ret.push_back(i), ret.push_back(N/i);
+        }
+    }
+    sort(ret.begin(),ret.end());
+    return ret;
+}
+
 ll getDivisorCount(ll N)
 {
-    vector<ll> prime_factor = getprimeFactor(N);
+    vector<ll> prime_factor = getPrimeFactors(N);
     map<ll,int> mapper;
     for (auto& num : prime_factor)
         mapper[num]++;

@@ -8,7 +8,7 @@ typedef long long ll;
 const ll N = 600851475143;
 
 int main() {
-    vector<ll> factor = getprimeFactor(N);
+    vector<ll> factor = getPrimeFactors(N);
     ll ans = 1;
     for (auto& f : factor) {
         ans = max(ans, f);

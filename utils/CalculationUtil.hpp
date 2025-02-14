@@ -27,14 +27,12 @@ string bigIntAdd(string& a, string& b)
 {
     string ret;
     reverse(a.begin(),a.end()); reverse(b.begin(),b.end());
-    while (a.size() != b.size())
-    {
+    while (a.size() != b.size()) {
         if (a.size() < b.size()) a.push_back('0');
         else b.push_back('0');
     }
     int add = 0;
-    for (int i = 0; i < b.size(); i++)
-    {
+    for (int i = 0; i < b.size(); i++) {
         int cur = (b[i]-'0') + (a[i]-'0') + add;
         ret.push_back(cur%10+'0');
         add = cur/10;
@@ -51,12 +49,10 @@ string bigIntAdd(string& a, string& b)
 string bigIntMul(string& a, string& b)
 {
     string ret = "0";
-    for (int i = b.size()-1; i >= 0; i--)
-    {
+    for (int i = b.size()-1; i >= 0; i--) {
         char c = b[i];
         string tmp; int add = 0;
-        for (int j = a.size()-1; j >= 0; j--)
-        {
+        for (int j = a.size()-1; j >= 0; j--) {
             int cur = (a[j]-'0') * (c-'0') + add;
             tmp.push_back(cur%10+'0');
             add = cur/10;
